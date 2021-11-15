@@ -1,0 +1,134 @@
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --bg-color: #02044a;
+  --theme-color: #06f;
+  --hover-color: rgb(0, 97, 241);
+  --border-color: #e6e6e6;
+  --input-focus: rgba(150, 192, 255, 0.26);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 0;
+}
+
+.wrapper {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 5px;
+  width: 400px;
+}
+
+.form {
+  width: 100%;
+}
+
+.form .input-box {
+  width: 100%;
+  display: block;
+  margin: 10px 0;
+}
+
+.form .input-box .input {
+  background: transparent;
+  width: 100%;
+  border: 2px solid var(--border-color);
+  outline: none;
+  padding: 10px 16px;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.3s all ease;
+}
+
+.form .input-box .input:focus {
+  background: var(--input-focus);
+  border-color: var(--theme-color);
+}
+
+.form .input-box textarea.input {
+  height: 100px;
+  resize: vertical;
+}
+
+.form .input-box input[type="file"].input {
+  height: unset !important;
+}
+
+.form .multiple-fields {
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.form .multiple-fields .input-box {
+  display: flex;
+}
+
+.form .multiple-fields .input-box .first {
+  flex: 5;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form .multiple-fields .input-box .my-btn {
+  flex: 1.4;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.my-btn {
+  background: var(--theme-color);
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  height: 40px;
+  transition: 0.3s all ease;
+}
+
+.my-btn:hover,
+.my-btn:focus,
+.my-btn:active,
+.my-btn.active {
+  background: var(--hover-color);
+}
+
+.btn-sm {
+  font-size: 12px;
+}
+
+.alert {
+  background: var(--theme-color);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  padding: 10px 16px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.loader {
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+}

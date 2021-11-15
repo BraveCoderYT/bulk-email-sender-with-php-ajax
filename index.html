@@ -1,0 +1,87 @@
+<!-- Code by Brave Coder | https://youtube.com/BraveCoder -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bulk Email Sender</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="alert"></div>
+      <form class="form" id="form">
+        <div class="input-box">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            class="input"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <input
+            type="email"
+            name="from"
+            placeholder="From: (Email)"
+            class="input"
+            required
+          />
+        </div>
+        <div class="multiple-fields" id="multipleFields">
+          <div class="input-box">
+            <input
+              type="email"
+              name="to[]"
+              placeholder="To: (Email)"
+              class="input first"
+              required
+            />
+            <button type="button" id="addMore" class="my-btn btn-sm">
+              Add More
+            </button>
+          </div>
+        </div>
+        <div class="input-box">
+          <input
+            type="text"
+            name="reply-to"
+            placeholder="Reply-to: (Optional)"
+            class="input"
+          />
+        </div>
+        <div class="input-box">
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject:"
+            class="input"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <textarea class="input" name="msg" placeholder="Message"></textarea>
+        </div>
+        <div class="input-box">
+          <input type="file" name="file[]" class="input" multiple />
+        </div>
+        <button
+          type="submit"
+          class="my-btn"
+          style="width: 100%; margin-top: 10px"
+        >
+          Send Mail
+        </button>
+      </form>
+      <img src="images/loader.gif" alt="" id="loader" class="loader" />
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- App.js -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
